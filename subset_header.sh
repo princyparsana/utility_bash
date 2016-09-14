@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 ## This script subsets a file by headers
