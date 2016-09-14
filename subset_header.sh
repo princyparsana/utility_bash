@@ -6,5 +6,5 @@
 fn=$1
 list=$2
 
-cols=($(sed '1!d;s/, /\n/g' $fn | grep -nf $list | sed 's/:.*$//'))
-cut -d '\t' -f 1$(printf ",%s" "${cols[@]}") $fn
+cols=($(sed '1!d;s/\t/\n/g' $fn | grep -w -nf $list | sed 's/:.*$//'))
+cut -f 1$(printf ",%s" "${cols[@]}") $fn
